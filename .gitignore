@@ -1,0 +1,134 @@
+# ============================================
+# YAPAY ZEKA CHATBOT - .gitignore
+# ============================================
+
+# ============================================
+# ENVIRONMENT & SECRETS
+# ============================================
+.env
+.env.local
+.env.production
+.env.*.local
+*.env
+**/.env
+
+# API Keys & Secrets
+**/secrets/
+*.key
+*.pem
+*.p12
+
+# ============================================
+# NODE MODULES
+# ============================================
+node_modules/
+**/node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ============================================
+# BUILD OUTPUTS
+# ============================================
+dist/
+build/
+out/
+.next/
+.nuxt/
+.cache/
+.parcel-cache/
+.turbo/
+
+# Backend
+backend/dist/
+backend/build/
+
+# Frontend
+frontend/.next/
+frontend/out/
+frontend/build/
+
+# Widget
+widget/dist/
+widget/build/
+
+# ============================================
+# LOGS
+# ============================================
+logs/
+*.log
+backend/logs/*.log
+!backend/logs/README.md
+
+# ============================================
+# TESTING
+# ============================================
+coverage/
+*.lcov
+.nyc_output/
+test-results/
+playwright-report/
+
+# ============================================
+# IDE & EDITORS
+# ============================================
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ============================================
+# TEMPORARY FILES
+# ============================================
+*.tmp
+*.temp
+.temp/
+tmp/
+
+# ============================================
+# DATABASE
+# ============================================
+*.sqlite
+*.sqlite3
+*.db
+
+# ============================================
+# MISC
+# ============================================
+.vercel
+.netlify
+.firebase/
+.serverless/
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Desktop.ini
+
+# ============================================
+# KIRO IDE
+# ============================================
+.kiro/
+!.kiro/specs/
+
+# ============================================
+# CUSTOM
+# ============================================
+# Test scripts (PowerShell)
+test-*.ps1
+
+# Temporary markdown files
+----*.md
