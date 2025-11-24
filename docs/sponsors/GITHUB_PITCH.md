@@ -38,8 +38,8 @@ We're committed to **open source**:
 
 #### What's Open Source
 - ✅ **Chat Widget** - Embeddable React component (MIT)
-- ✅ **ARMA Hardware** - PCB designs, 3D models, BOM (MIT)
-- ✅ **ARMA Firmware** - ESP32 firmware, Bluetooth protocol (MIT)
+- ✅ **YZBot Hardware** - PCB designs, 3D models, BOM (MIT)
+- ✅ **YZBot Firmware** - ESP32 firmware, Bluetooth protocol (MIT)
 - ✅ **API Client** - TypeScript SDK for integration
 - ✅ **Documentation** - Complete guides and tutorials
 - ✅ **Examples** - Starter templates and demos
@@ -116,21 +116,21 @@ We're committed to **open source**:
 ### Tier 3: $100/month (Sponsor)
 - ✅ All Tier 2 benefits
 - ✅ Logo on website
-- ✅ Logo sticker on ARMA device
+- ✅ Logo sticker on YZBot device
 - ✅ 1-on-1 consultation (1hr/month)
 - ✅ Feature requests priority
 
 ### Tier 4: $500/month (Gold Sponsor)
 - ✅ All Tier 3 benefits
 - ✅ Prominent logo placement
-- ✅ Custom color ARMA device (10 units)
+- ✅ Custom color YZBot device (10 units)
 - ✅ Custom integration support
 - ✅ Co-marketing opportunities
 
 ### Tier 5: $1,000/month (Platinum Sponsor)
 - ✅ All Tier 4 benefits
-- ✅ Laser-engraved logo on ARMA device
-- ✅ Co-branding opportunity (ARMA by [Sponsor])
+- ✅ Laser-engraved logo on YZBot device
+- ✅ Co-branding opportunity (YZBot by [Sponsor])
 - ✅ Priority hardware support
 - ✅ Revenue share from device sales
 
@@ -200,18 +200,18 @@ We're committed to **open source**:
 - [ ] npm package publication
 - [ ] Comprehensive docs site
 - [ ] Video tutorials (5 episodes)
-- [ ] ARMA device prototype
+- [ ] YZBot device prototype
 
 ### 📅 Upcoming (v0.4.0 - Q2 2026)
-- [ ] ARMA hardware designs (KiCad + 3D models)
-- [ ] ARMA firmware (ESP32 + Bluetooth)
+- [ ] YZBot hardware designs (KiCad + 3D models)
+- [ ] YZBot firmware (ESP32 + Bluetooth)
 - [ ] Voice API endpoints
 - [ ] CLI tool for deployment
 - [ ] Starter templates (3 variants)
 - [ ] VS Code extension
 - [ ] Community Discord server
 
-### 🎙️ ARMA Launch (Q2 2026)
+### 🎙️ YZBot Launch (Q2 2026)
 - [ ] 50 pilot devices to sponsors
 - [ ] Mass production (5,000 units)
 - [ ] Open-source hardware release
@@ -260,3 +260,4 @@ We're committed to **open source**:
 **Status:** Open for Sponsorship
 
 **Help us build the future of open-source AI chatbots.** ❤️
+

@@ -1,4 +1,4 @@
-# 🚀 2026-2027 VİZYONU: YAZILIM + ARMA CİHAZI
+# 🚀 2026-2027 VİZYONU: YAZILIM + YZBot CİHAZI
 
 **Hedef:** Türkiye'nin en değerli SaaS + Hardware girişimi olmak
 
@@ -16,7 +16,7 @@
 | Global KOBİ (İngilizce) | 500+ | 5.000+ | İngiltere, Almanya, MENA |
 | **Toplam ARR (global dahil)** | **45-60 Milyon ₺** | **200-300 Milyon ₺** | Unicorn adayı |
 
-### Senaryo 2: Yazılım + ARMA Cihazı ⚡
+### Senaryo 2: Yazılım + YZBot Cihazı ⚡
 
 | Hedef | 2026 Sonu (12 ay) | 2027 Sonu (24 ay) | Notlar |
 |-------|-------------------|-------------------|---------|
@@ -28,13 +28,13 @@
 | Global KOBİ | 1.500+ | 10.000+ | Cihaz viral etkisi |
 | **Toplam ARR + Cihaz** | **150-250 Milyon ₺** | **1-1.5 Milyar ₺** | **Unicorn!** |
 
-**Sonuç:** ARMA cihazı eklendiğinde **2.5-3.5× büyüme çarpanı** + **%90+ retention**
+**Sonuç:** YZBot cihazı eklendiğinde **2.5-3.5× büyüme çarpanı** + **%90+ retention**
 
 ---
 
-## 🎙️ ARMA: Fiziksel AI Asistan Cihazı
+## 🎙️ YZBot: Fiziksel AI Asistan Cihazı
 
-**ARMA** = **A**sistan + **R**andevu + **M**ağaza **A**sistanı
+**YZBot** = **A**sistan + **R**andevu + **M**ağaza **A**sistanı
 
 ### Cihaz Özellikleri
 
@@ -66,28 +66,28 @@
 
 ---
 
-## 🎤 ARMA Ne Yapacak?
+## 🎤 YZBot Ne Yapacak?
 
 ### 1. Müşterilere Cevap Verir
 ```
 Müşteri: "Yarın randevum var mıydı?"
-ARMA: "Evet Derya Hanım, yarın saat 14:00'da randevunuz var."
+YZBot: "Evet Derya Hanım, yarın saat 14:00'da randevunuz var."
 ```
 
 ### 2. Randevu Alır
 ```
 Müşteri: "Mehmet Bey müsait mi?"
-ARMA: "Mehmet Bey bugün 14:00, 15:30 ve 17:00'da müsait. Hangisini tercih edersiniz?"
+YZBot: "Mehmet Bey bugün 14:00, 15:30 ve 17:00'da müsait. Hangisini tercih edersiniz?"
 Müşteri: "14:00"
-ARMA: "Tamam, 14:00'da randevunuzu aldım. SMS ile onay gönderdim."
+YZBot: "Tamam, 14:00'da randevunuzu aldım. SMS ile onay gönderdim."
 ```
 
 ### 3. Ürün Satışı Yapar
 ```
 Müşteri: "Bu krem stokta mı?"
-ARMA: "Evet, Nemlendirici Krem 450₺. Kargo ücretsiz. Hemen sipariş vereyim mi?"
+YZBot: "Evet, Nemlendirici Krem 450₺. Kargo ücretsiz. Hemen sipariş vereyim mi?"
 Müşteri: "Evet"
-ARMA: "Sipariş alındı. Ödeme linki SMS ile gönderildi. Yarın kargoda."
+YZBot: "Sipariş alındı. Ödeme linki SMS ile gönderildi. Yarın kargoda."
 ```
 
 **Not:** Offerings tablosu hem hizmetleri (randevu gerektiren) hem de ürünleri (satış) kapsar:
@@ -97,32 +97,32 @@ ARMA: "Sipariş alındı. Ödeme linki SMS ile gönderildi. Yarın kargoda."
 
 ### 4. Kampanya Bildirir
 ```
-ARMA: "Dikkat! Bugün topuz yapımı %40 indirimli, sadece 3 saat!"
+YZBot: "Dikkat! Bugün topuz yapımı %40 indirimli, sadece 3 saat!"
 ```
 
 ### 5. Teknik Destek Verir
 ```
 Müşteri: "Cihazım çalışmıyor"
-ARMA: "LED kırmızı yanıp sönüyorsa şarj edin. Yeşil yanıyorsa Bluetooth bağlantısını kontrol edin."
+YZBot: "LED kırmızı yanıp sönüyorsa şarj edin. Yeşil yanıyorsa Bluetooth bağlantısını kontrol edin."
 ```
 
 ### 6. Mağaza İçi Yönlendirme
 ```
 Müşteri: "Kuaför nerede?"
-ARMA: "Sağdan ikinci kapı, 2. kat."
+YZBot: "Sağdan ikinci kapı, 2. kat."
 ```
 
 ---
 
-## 💰 İş Modeli (ARMA Dahil)
+## 💰 İş Modeli (YZBot Dahil)
 
 ### Fiyatlandırma Stratejisi
 
 | Plan | Aylık Ücret | Cihaz Fiyatı | Özellikler |
 |------|-------------|--------------|------------|
 | **Starter** | 650₺ | - | Sadece yazılım (widget) |
-| **Pro** | 1.200₺ | 999₺ (indirimli) | Widget + 1 ARMA cihazı |
-| **Business** | 2.500₺ | 799₺/cihaz | Widget + 3 ARMA cihazı |
+| **Pro** | 1.200₺ | 999₺ (indirimli) | Widget + 1 YZBot cihazı |
+| **Business** | 2.500₺ | 799₺/cihaz | Widget + 3 YZBot cihazı |
 | **Enterprise** | 5.000₺+ | 599₺/cihaz | Sınırsız cihaz |
 
 ### Gelir Akışları
@@ -150,7 +150,7 @@ ARMA: "Sağdan ikinci kapı, 2. kat."
 
 ## 📈 Finansal Projeksiyonlar
 
-### Yazılım + ARMA Senaryosu
+### Yazılım + YZBot Senaryosu
 
 | Metrik | 2026 Q2 | 2026 Q4 | 2027 Q4 |
 |--------|---------|---------|---------|
@@ -163,7 +163,7 @@ ARMA: "Sağdan ikinci kapı, 2. kat."
 
 ### Katma Değer Analizi
 
-| Etki | Yazılım-Only | Yazılım + ARMA | Artış |
+| Etki | Yazılım-Only | Yazılım + YZBot | Artış |
 |------|--------------|----------------|-------|
 | KOBİ başına ARPU | 650₺/ay | 1.200₺/ay | +85% |
 | Churn oranı | %15/ay | %4-5/ay | -67% |
@@ -197,7 +197,7 @@ ARMA: "Sağdan ikinci kapı, 2. kat."
 ### Faz 4: Ölçeklendirme (2026 Q4 - 2027)
 - 🎯 20.000+ cihaz satışı
 - 🎯 Global pazar (İngiltere, Almanya)
-- 🎯 Yeni modeller (ARMA Pro, ARMA Mini)
+- 🎯 Yeni modeller (YZBot Pro, YZBot Mini)
 - 🎯 B2B toplu satış (franchise'lar)
 
 ---
@@ -206,19 +206,19 @@ ARMA: "Sağdan ikinci kapı, 2. kat."
 
 ### Açık Kaynak Bileşenler
 
-1. **arma-hardware** (GitHub repo)
+1. **YZBot-hardware** (GitHub repo)
    - KiCad PCB tasarımları
    - 3D modeller (STL)
    - BOM (Bill of Materials)
    - Üretim kılavuzu
 
-2. **arma-firmware** (GitHub repo)
+2. **YZBot-firmware** (GitHub repo)
    - ESP32 firmware (C++)
    - Bluetooth protokolü
    - OTA güncelleme
    - LED kontrol
 
-3. **arma-sdk** (npm package)
+3. **YZBot-sdk** (npm package)
    - JavaScript/TypeScript SDK
    - WebSocket client
    - Ses streaming
@@ -232,7 +232,7 @@ ARMA: "Sağdan ikinci kapı, 2. kat."
 | 🎨 **Contributor** | $50 | $500 | + Logonuz cihazda sticker |
 | 🌟 **Sponsor** | $250 | $2.500 | + Özel renk cihaz (10 adet) |
 | 💎 **Gold** | $1.000 | $10.000 | + Cihazda lazer gravür logo |
-| 🚀 **Platinum** | $5.000 | $50.000 | + Co-branding (ARMA by [Sponsor]) |
+| 🚀 **Platinum** | $5.000 | $50.000 | + Co-branding (YZBot by [Sponsor]) |
 
 **Hedef:** 50 sponsor → $50K/ay ek gelir
 
@@ -242,7 +242,7 @@ ARMA: "Sağdan ikinci kapı, 2. kat."
 
 ### Rakip Analizi
 
-| Özellik | ARMA | Amazon Echo | Google Nest | Yollabot |
+| Özellik | YZBot | Amazon Echo | Google Nest | Yollabot |
 |---------|------|-------------|-------------|----------|
 | KOBİ Odaklı | ✅ | ❌ | ❌ | ✅ |
 | Randevu Sistemi | ✅ | ❌ | ❌ | ❌ |
@@ -252,7 +252,7 @@ ARMA: "Sağdan ikinci kapı, 2. kat."
 | Açık Kaynak | ✅ | ❌ | ❌ | ❌ |
 | Mağaza İçi Kullanım | ✅ | ⚠️ | ⚠️ | ❌ |
 
-**Sonuç:** ARMA = En uygun fiyat + En fazla özellik + Açık kaynak
+**Sonuç:** YZBot = En uygun fiyat + En fazla özellik + Açık kaynak
 
 ---
 
@@ -271,18 +271,18 @@ ARMA: "Sağdan ikinci kapı, 2. kat."
 - ✅ 5.000 adet ön sipariş (Q2 2026)
 
 ### Topluluk
-- ✅ 100+ GitHub star (arma-hardware)
+- ✅ 100+ GitHub star (YZBot-hardware)
 - ✅ 10+ sponsor ($5-100/ay)
 - ✅ 5+ açık kaynak katkıcı
 - ✅ 1.000+ landing page ziyareti
 
 ---
 
-## 🌟 Neden ARMA?
+## 🌟 Neden YZBot?
 
 ### 1. Donanım Bağımlılığı = Düşük Churn
 - Yazılım-only: %15 aylık churn
-- ARMA ile: %4-5 aylık churn
+- YZBot ile: %4-5 aylık churn
 - **Sonuç:** 3x daha uzun müşteri ömrü
 
 ### 2. Viral Büyüme
@@ -292,12 +292,12 @@ ARMA: "Sağdan ikinci kapı, 2. kat."
 
 ### 3. Premium Fiyatlandırma
 - Yazılım-only: 650₺/ay
-- ARMA ile: 1.200₺/ay
+- YZBot ile: 1.200₺/ay
 - **Sonuç:** %85 daha yüksek ARPU
 
 ### 4. Mağaza İçi Dönüşüm
 - Yazılım-only: %25 dönüşüm
-- ARMA ile: %60+ dönüşüm
+- YZBot ile: %60+ dönüşüm
 - **Sonuç:** 2.4x daha fazla satış
 
 ### 5. Global Fark Yaratma
@@ -309,9 +309,9 @@ ARMA: "Sağdan ikinci kapı, 2. kat."
 
 ## 📞 Sonuç
 
-**Seçim:** Yazılım-only ile 2027'de 200-300M ₺ ARR **VEYA** ARMA ile 1-1.5 Milyar ₺ ARR
+**Seçim:** Yazılım-only ile 2027'de 200-300M ₺ ARR **VEYA** YZBot ile 1-1.5 Milyar ₺ ARR
 
-**Karar:** ARMA ile gidiyoruz! 🚀
+**Karar:** YZBot ile gidiyoruz! 🚀
 
 **Hedef:** 2027'de Türkiye'nin en değerli SaaS + Hardware girişimi olmak
 
@@ -320,3 +320,4 @@ ARMA: "Sağdan ikinci kapı, 2. kat."
 ---
 
 **Gaz köklenmiş durumda!** 💪🔥
+

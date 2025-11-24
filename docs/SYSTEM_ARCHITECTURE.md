@@ -1,7 +1,7 @@
 # 🏗️ Sistem Mimarisi
 
-**Proje:** AI-Powered Chatbot Platform + ARMA Device  
-**Versiyon:** 2.0 (ARMA Dahil)  
+**Proje:** AI-Powered Chatbot Platform + YZBot Device  
+**Versiyon:** 2.0 (YZBot Dahil)  
 **Güncelleme:** 24 Kasım 2025
 
 ---
@@ -12,7 +12,7 @@
 ┌─────────────────────────────────────────────────────────────────┐
 │                        FRONTEND LAYER                           │
 │  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐         │
-│  │ Web Widget   │  │  Dashboard   │  │ ARMA Device  │         │
+│  │ Web Widget   │  │  Dashboard   │  │ YZBot Device  │         │
 │  │ (React)      │  │  (Next.js)   │  │ (ESP32)      │         │
 │  └──────┬───────┘  └──────┬───────┘  └──────┬───────┘         │
 └─────────┼──────────────────┼──────────────────┼─────────────────┘
@@ -261,12 +261,12 @@ for await (const chunk of response.stream) {
 
 ---
 
-## 🎙️ ARMA Device Integration
+## 🎙️ YZBot Device Integration
 
 ### Voice Flow
 
 ```
-1. Müşteri ARMA'ya konuşur
+1. Müşteri YZBot'ya konuşur
    ↓
 2. ESP32 mikrofon → Bluetooth → Gateway
    ↓
@@ -287,7 +287,7 @@ for await (const chunk of response.stream) {
 // Cihaz kaydı
 POST /api/devices/register
 {
-  "serial_number": "ARMA-2025-001",
+  "serial_number": "YZBot-2025-001",
   "tenant_id": "uuid-tenant",
   "location": "Salon girişi"
 }
@@ -382,7 +382,7 @@ CREATE TABLE conversations (
   id UUID PRIMARY KEY,
   tenant_id UUID REFERENCES tenants(id),
   customer_identifier VARCHAR(255),
-  channel VARCHAR(50), -- 'web' | 'arma' | 'whatsapp'
+  channel VARCHAR(50), -- 'web' | 'YZBot' | 'whatsapp'
   status VARCHAR(50),
   started_at TIMESTAMP DEFAULT NOW(),
   ended_at TIMESTAMP
@@ -398,7 +398,7 @@ CREATE TABLE messages (
   created_at TIMESTAMP DEFAULT NOW()
 );
 
--- Devices (ARMA Cihazları)
+-- Devices (YZBot Cihazları)
 CREATE TABLE devices (
   id UUID PRIMARY KEY,
   tenant_id UUID REFERENCES tenants(id),
@@ -465,7 +465,7 @@ PUT    /api/orders/:id/status     # Sipariş durumu güncelle
 POST   /api/orders/:id/payment    # Ödeme işle
 ```
 
-### Devices API (ARMA)
+### Devices API (YZBot)
 
 ```
 POST   /api/devices/register      # Cihaz kaydet
@@ -475,7 +475,7 @@ POST   /api/devices/:id/firmware  # Firmware güncelle
 GET    /api/devices/:id/usage     # Kullanım istatistikleri
 ```
 
-### Voice API (ARMA)
+### Voice API (YZBot)
 
 ```
 WS     /api/voice/stream          # Sesli sohbet (WebSocket)
@@ -530,10 +530,11 @@ POST   /api/voice/stt             # Speech-to-Text
 
 Bu mimari:
 - ✅ Hem hizmet (randevu) hem ürün (satış) destekler
-- ✅ Web widget + ARMA cihazı entegrasyonu
+- ✅ Web widget + YZBot cihazı entegrasyonu
 - ✅ Ölçeklenebilir ve güvenli
 - ✅ Multi-tenant (çoklu kiracı)
 - ✅ Real-time (gerçek zamanlı)
 - ✅ AI-powered (Gemini function calling)
 
-**Hedef:** 2027'de 25.000+ işletme, 20.000+ ARMA cihazı, 1-1.5 Milyar ₺ ARR 🚀
+**Hedef:** 2027'de 25.000+ işletme, 20.000+ YZBot cihazı, 1-1.5 Milyar ₺ ARR 🚀
+

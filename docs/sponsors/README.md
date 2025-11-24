@@ -123,27 +123,27 @@ We're seeking sponsorship to accelerate development, reduce infrastructure costs
   - Open-source widget release
   - 3 case studies
 
-### Month 5-6 (Scale + ARMA Launch)
+### Month 5-6 (Scale + YZBot Launch)
 - **Spend:** $14,000
 - **Deliverables:**
   - 200+ active businesses
   - $9,800 MRR
-  - ARMA device prototype (50 units)
+  - YZBot device prototype (50 units)
   - Open-source hardware release
   - Conference talks
   - Multi-region deployment
 
-### 2026 Q2-Q4 (ARMA Mass Production)
+### 2026 Q2-Q4 (YZBot Mass Production)
 - **Spend:** $50,000+
 - **Deliverables:**
-  - 5,000+ ARMA devices deployed
+  - 5,000+ YZBot devices deployed
   - 6,000-8,000 paying businesses
   - 150-250M ₺ ARR
   - Turkey market leader (50-60%)
 
 ### 2027 (Unicorn Path)
 - **Target:** 1-1.5 Billion ₺ ARR
-- **Devices:** 20,000+ ARMA units
+- **Devices:** 20,000+ YZBot units
 - **Businesses:** 25,000-35,000
 - **Market Share:** 75-85% (Turkey)
 
@@ -233,3 +233,4 @@ Thank you to all potential sponsors for considering our application. Your suppor
 
 **Last Updated:** November 24, 2025  
 **Version:** 1.0
+

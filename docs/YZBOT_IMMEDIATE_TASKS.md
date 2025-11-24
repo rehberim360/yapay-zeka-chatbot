@@ -1,6 +1,6 @@
-# 🚀 ARMA: Hemen Yapılacaklar Listesi
+# 🚀 YZBot: Hemen Yapılacaklar Listesi
 
-**Hedef:** 2026 Q2'de ARMA cihazını lansmanlamak için bu hafta başlayacağımız görevler.
+**Hedef:** 2026 Q2'de YZBot cihazını lansmanlamak için bu hafta başlayacağımız görevler.
 
 ---
 
@@ -12,7 +12,7 @@
 - [ ] **Platform:** Fiverr / 99designs
 - [ ] **Bütçe:** 2.000₺
 - [ ] **Gereksinimler:**
-  - ARMA yazısı + ses dalgası ikonu
+  - YZBot yazısı + ses dalgası ikonu
   - Turkuaz + Beyaz renk paleti
   - Modern, yuvarlak tipografi
   - SVG + PNG formatları
@@ -86,7 +86,7 @@ POST /api/devices/:id/firmware
 
 #### 6. Database Migration (Cihaz Tabloları)
 ```sql
--- backend/migrations/008_add_arma_devices.sql
+-- backend/migrations/008_add_YZBot_devices.sql
 CREATE TABLE devices (
   id UUID PRIMARY KEY,
   tenant_id UUID REFERENCES tenants(id),
@@ -114,8 +114,8 @@ CREATE TABLE device_usage (
 
 ### 🔧 GitHub (Öncelik: Orta)
 
-#### 7. arma-hardware Repository
-- [ ] **Repo:** `github.com/botunuz/arma-hardware`
+#### 7. YZBot-hardware Repository
+- [ ] **Repo:** `github.com/botunuz/YZBot-hardware`
 - [ ] **İçerik:**
   - README.md (proje tanıtımı)
   - LICENSE (MIT)
@@ -127,8 +127,8 @@ CREATE TABLE device_usage (
 
 **Tahmini Süre:** 2 saat
 
-#### 8. arma-firmware Repository
-- [ ] **Repo:** `github.com/botunuz/arma-firmware`
+#### 8. YZBot-firmware Repository
+- [ ] **Repo:** `github.com/botunuz/YZBot-firmware`
 - [ ] **İçerik:**
   - README.md
   - LICENSE (MIT)
@@ -139,14 +139,14 @@ CREATE TABLE device_usage (
 
 **Tahmini Süre:** 3 saat
 
-#### 9. arma-sdk Repository (npm package)
-- [ ] **Repo:** `github.com/botunuz/arma-sdk`
+#### 9. YZBot-sdk Repository (npm package)
+- [ ] **Repo:** `github.com/botunuz/YZBot-sdk`
 - [ ] **İçerik:**
   - TypeScript SDK
   - WebSocket client
   - Device management API
   - Audio streaming helpers
-- [ ] **npm publish:** `@botunuz/arma-sdk`
+- [ ] **npm publish:** `@botunuz/YZBot-sdk`
 
 **Tahmini Süre:** 4 saat
 
@@ -154,7 +154,7 @@ CREATE TABLE device_usage (
 
 ### 📢 Pazarlama (Öncelik: Orta)
 
-#### 10. Landing Page (arma.botunuz.com)
+#### 10. Landing Page (YZBot.botunuz.com)
 - [ ] **Platform:** Next.js (mevcut frontend'e ekle)
 - [ ] **İçerik:**
   - Hero section (3D render + slogan)
@@ -176,7 +176,7 @@ CREATE TABLE device_usage (
   - WhatsApp Business
 - [ ] **Mesaj:**
   ```
-  🎙️ ARMA Pilot Programı Açıldı!
+  🎙️ YZBot Pilot Programı Açıldı!
   
   Türkiye'nin ilk AI-powered fiziksel asistan cihazını
   ÜCRETSİZ test edin!
@@ -186,7 +186,7 @@ CREATE TABLE device_usage (
   ✅ 3 ay ücretsiz premium plan
   ✅ Öncelikli destek
   
-  Başvuru: arma.botunuz.com/pilot
+  Başvuru: YZBot.botunuz.com/pilot
   Son tarih: 15 Aralık 2025
   ```
 
@@ -196,7 +196,7 @@ CREATE TABLE device_usage (
 - [ ] **Format:** 60 saniye (Instagram Reels, TikTok, YouTube Shorts)
 - [ ] **Senaryo:**
   1. Problem (0-10s): "Müşteri geldi, kimse yok, kayıp satış"
-  2. Çözüm (10-30s): "ARMA devreye giriyor, randevu alıyor"
+  2. Çözüm (10-30s): "YZBot devreye giriyor, randevu alıyor"
   3. Özellikler (30-50s): Hızlı montaj, 6 kullanım senaryosu
   4. CTA (50-60s): "Pilot programa katıl, ücretsiz dene"
 - [ ] **Çekim:** Smartphone (iPhone 14+)
@@ -282,7 +282,7 @@ CREATE TABLE device_usage (
 | **28 Şubat 2026** | 50 pilot cihaz üretimi | ⏳ |
 | **31 Mart 2026** | Pilot program tamamlandı, geri bildirim | ⏳ |
 | **30 Nisan 2026** | Toplu üretim anlaşması (5.000 adet) | ⏳ |
-| **30 Haziran 2026** | **ARMA Resmi Lansmanı** 🚀 | ⏳ |
+| **30 Haziran 2026** | **YZBot Resmi Lansmanı** 🚀 | ⏳ |
 
 ---
 
@@ -321,7 +321,7 @@ CREATE TABLE device_usage (
 - ✅ 5.000 adet ön sipariş (Q2 2026)
 
 ### Topluluk
-- ✅ 100+ GitHub star (arma-hardware)
+- ✅ 100+ GitHub star (YZBot-hardware)
 - ✅ 10+ sponsor ($5-100/ay)
 - ✅ 5+ açık kaynak katkıcı
 - ✅ 1.000+ landing page ziyareti
@@ -331,12 +331,13 @@ CREATE TABLE device_usage (
 ## 📞 İletişim & Koordinasyon
 
 **Proje Yöneticisi:** [Senin adın]  
-**Slack/Discord:** #arma-device  
+**Slack/Discord:** #YZBot-device  
 **Haftalık Toplantı:** Her Pazartesi 10:00  
 **Durum Raporu:** Her Cuma (bu doküman güncellenir)
 
 ---
 
-**Hedef:** 2026 Q2'de ARMA'yı lansmanlamak ve Türkiye'nin en inovatif SaaS+Hardware girişimi olmak! 🚀
+**Hedef:** 2026 Q2'de YZBot'yı lansmanlamak ve Türkiye'nin en inovatif SaaS+Hardware girişimi olmak! 🚀
 
 **Şimdi gaza basma zamanı!** 💪
+

@@ -20,7 +20,7 @@
 
 Transform any business website into an intelligent AI chatbot in **under 5 minutes**. Our platform automatically scrapes, analyzes, and creates a custom chatbot that handles customer inquiries, books appointments, and provides 24/7 support.
 
-**NEW:** Introducing **ARMA** - Turkey's first AI-powered physical assistant device for businesses! 🎙️
+**NEW:** Introducing **YZBot** - Turkey's first AI-powered physical assistant device for businesses! 🎙️
 
 ### 🎯 Problem We Solve
 
@@ -36,7 +36,7 @@ Transform any business website into an intelligent AI chatbot in **under 5 minut
 - **Smart Context:** Understands your services, pricing, and business logic
 - **Native Integration:** Built-in appointment booking and CRM
 - **Affordable:** Starting at $49/month (launching soon)
-- **ARMA Device:** Physical voice assistant for in-store customer service (2026 Q2)
+- **YZBot Device:** Physical voice assistant for in-store customer service (2026 Q2)
 
 ---
 
@@ -70,7 +70,7 @@ Transform any business website into an intelligent AI chatbot in **under 5 minut
 - **Dynamic Prompts** - Context-aware responses tailored to each business
 - **Function Calling** - Native appointment booking, service queries, and more
 - **Streaming Responses** - Real-time, chunk-by-chunk responses (SSE)
-- **Voice Support** - Speech-to-text and text-to-speech for ARMA device
+- **Voice Support** - Speech-to-text and text-to-speech for YZBot device
 
 ### 💼 Business Features
 
@@ -86,7 +86,7 @@ Transform any business website into an intelligent AI chatbot in **under 5 minut
 ### 🎨 User Experience
 
 - **Embeddable Widget** - Single-line integration for any website
-- **ARMA Device** - Physical voice assistant for in-store service (NEW!)
+- **YZBot Device** - Physical voice assistant for in-store service (NEW!)
 - **Customizable Design** - Match your brand colors, logo, and style
 - **Mobile-First** - Responsive design for all devices
 - **Accessibility** - WCAG 2.1 AA compliant
@@ -131,7 +131,7 @@ graph TB
     I -->|Sell| K[Product/Service Sales]
     I -->|Answer| L[Knowledge Base]
     I -->|Notify| M[Notification System]
-    N[ARMA Device] -->|Voice| C
+    N[YZBot Device] -->|Voice| C
     C -->|TTS| N
 ```
 
@@ -206,7 +206,7 @@ npm run dev
 - [ ] **Dashboard** - Bot configuration, analytics, live chat
 - [ ] **Performance Optimization** - Redis cache, response time <200ms
 - [ ] **Production Deployment** - CDN, load balancing, monitoring
-- [ ] **ARMA Device** - Prototype design and firmware development
+- [ ] **YZBot Device** - Prototype design and firmware development
 
 ### 📅 Roadmap
 
@@ -216,20 +216,20 @@ npm run dev
 - [ ] Advanced analytics (sentiment analysis, topic clustering)
 - [ ] WhatsApp/Telegram integration
 
-**Q2 2026 - ARMA Launch** 🎙️
-- [ ] ARMA device prototype (50 units)
+**Q2 2026 - YZBot Launch** 🎙️
+- [ ] YZBot device prototype (50 units)
 - [ ] Pilot program (50 businesses)
 - [ ] Mass production (5,000 units)
 - [ ] Open-source hardware release
 
 **Q3-Q4 2026**
-- [ ] 5,000+ ARMA devices deployed
+- [ ] 5,000+ YZBot devices deployed
 - [ ] White-label solution
 - [ ] Global expansion (UK, Germany, MENA)
 - [ ] Enterprise features
 
 **2027 Goals**
-- [ ] 20,000+ ARMA devices
+- [ ] 20,000+ YZBot devices
 - [ ] 25,000-35,000 paying businesses
 - [ ] 1-1.5 Billion ₺ ARR
 - [ ] Turkey's #1 AI chatbot platform
@@ -255,13 +255,13 @@ npm run dev
 | **Software Only** | | |
 | Paying Businesses | 4,500-6,000 | 15,000-20,000 |
 | ARR | 45-60M ₺ | 200-300M ₺ |
-| **Software + ARMA** | | |
+| **Software + YZBot** | | |
 | Paying Businesses | 6,000-8,000 | 25,000-35,000 |
-| ARMA Devices Sold | 5,000+ | 20,000+ |
+| YZBot Devices Sold | 5,000+ | 20,000+ |
 | Total ARR | 150-250M ₺ | **1-1.5B ₺** |
 | Turkey Market Share | 50-60% | 75-85% |
 
-**Impact:** ARMA device adds **2.5-3.5× growth multiplier** + **85%+ retention**
+**Impact:** YZBot device adds **2.5-3.5× growth multiplier** + **85%+ retention**
 
 ---
 
@@ -327,3 +327,4 @@ Built with amazing open-source technologies:
 [⬆ back to top](#-ai-powered-chatbot-platform)
 
 </div>
+

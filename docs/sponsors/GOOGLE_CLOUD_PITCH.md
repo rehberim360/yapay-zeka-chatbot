@@ -156,8 +156,8 @@ const functions = [
 - ✅ Cloud Run deployment
 - ✅ Cloud CDN for global delivery
 - ✅ Advanced analytics with BigQuery
-- ✅ Speech-to-Text + TTS for ARMA device
-- ✅ 200+ active businesses + 500+ ARMA devices
+- ✅ Speech-to-Text + TTS for YZBot device
+- ✅ 200+ active businesses + 500+ YZBot devices
 
 ---
 
@@ -237,7 +237,7 @@ const functions = [
 - 🎯 50 active businesses
 - 🎯 500K+ API calls/month
 - 🎯 Multi-language support
-- 🎯 ARMA device prototype with Google Speech API
+- 🎯 YZBot device prototype with Google Speech API
 - 🎯 Google Cloud blog post
 
 ---
@@ -281,3 +281,4 @@ Join **Google for Startups Cloud Program**:
 **Status:** Awaiting Review
 
 **We're building the future of SMB automation with Google Gemini AI.** 🚀
+
