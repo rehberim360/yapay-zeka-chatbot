@@ -86,7 +86,14 @@ ARMA: "Tamam, 14:00'da randevunuzu aldım. SMS ile onay gönderdim."
 ```
 Müşteri: "Bu krem stokta mı?"
 ARMA: "Evet, Nemlendirici Krem 450₺. Kargo ücretsiz. Hemen sipariş vereyim mi?"
+Müşteri: "Evet"
+ARMA: "Sipariş alındı. Ödeme linki SMS ile gönderildi. Yarın kargoda."
 ```
+
+**Not:** Offerings tablosu hem hizmetleri (randevu gerektiren) hem de ürünleri (satış) kapsar:
+- `offering_type: 'service'` → Randevu sistemi
+- `offering_type: 'product'` → Ürün satışı + stok yönetimi
+- `meta_info` JSONB → Esnek veri (fiyat, stok, özellikler)
 
 ### 4. Kampanya Bildirir
 ```

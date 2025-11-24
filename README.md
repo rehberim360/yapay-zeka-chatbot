@@ -76,9 +76,12 @@ Transform any business website into an intelligent AI chatbot in **under 5 minut
 
 - **Multi-Tenant Architecture** - Serve unlimited businesses from one platform
 - **Appointment System** - Conflict detection, availability checking, notifications
+- **Product/Service Sales** - Direct selling through chat with payment integration
+- **Offerings Management** - Unified system for services (appointments) and products (sales)
 - **Knowledge Base** - FAQ management with semantic search
 - **Analytics Dashboard** - Conversation metrics, customer insights, performance tracking
 - **Live Chat Takeover** - Human agents can take over conversations seamlessly
+- **Payment Integration** - Stripe, PayPal, local payment gateways (planned)
 
 ### 🎨 User Experience
 
@@ -123,7 +126,13 @@ graph TB
     C -->|Cache| F[Redis]
     G[Dashboard] -->|Manage| C
     H[Scraper] -->|Extract| C
-    D -->|Function Call| I[Appointment System]
+    D -->|Function Calls| I[Business Logic Layer]
+    I -->|Book| J[Appointment System]
+    I -->|Sell| K[Product/Service Sales]
+    I -->|Answer| L[Knowledge Base]
+    I -->|Notify| M[Notification System]
+    N[ARMA Device] -->|Voice| C
+    C -->|TTS| N
 ```
 
 ### Database Schema

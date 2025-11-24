@@ -134,7 +134,13 @@ ARMA: "Sağdan ikinci kapı, 2. kat."
 │  - PostgreSQL (bilgi tabanı)               │
 │  - WebSocket (gerçek zamanlı)              │
 │  - TTS (metin → ses)                       │
-└─────────────────────────────────────────────┘
+└─────┬───────────┬───────────┬───────────────┘
+      │           │           │
+      ▼           ▼           ▼
+┌──────────┐ ┌──────────┐ ┌──────────┐
+│ Randevu  │ │  Ürün    │ │  Bilgi   │
+│ Sistemi  │ │  Satışı  │ │  Bankası │
+└──────────┘ └──────────┘ └──────────┘
 ```
 
 ### Yeni Modüller (2-3 Hafta)
