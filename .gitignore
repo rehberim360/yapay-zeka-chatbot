@@ -149,7 +149,9 @@ frontend/src/**/*.ts
 # Keep only public-facing files
 !frontend/src/components/ui/mascot-logo.tsx
 !frontend/src/components/ui/launch-countdown-popup.tsx
+!frontend/src/components/ui/button.tsx
 !frontend/src/components/marketing/**
+!frontend/src/lib/utils.ts
 
 # Configuration files
 backend/tsconfig.json
