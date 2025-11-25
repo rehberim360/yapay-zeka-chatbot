@@ -158,7 +158,6 @@ frontend/src/**/*.ts
 
 # Configuration files
 backend/tsconfig.json
-frontend/tsconfig.json
 backend/jest.config.js
 
 # Database migrations (keep private)
