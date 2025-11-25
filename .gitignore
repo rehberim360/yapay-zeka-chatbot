@@ -134,41 +134,50 @@ test-*.ps1
 ----*.md
 
 # ============================================
-# PRIVATE - NOT FOR PUBLIC REPO
+# PRIVATE - KEEP SOURCE CODE PRIVATE
 # ============================================
-# Backend source code (keep private during development)
-backend/src/**/*.ts
-backend/src/**/*.js
-!backend/src/index.ts
 
-# Frontend source code (keep private during development)
-frontend/src/**/*.tsx
-frontend/src/**/*.ts
-!frontend/src/app/layout.tsx
-!frontend/src/app/(marketing)/layout.tsx
-!frontend/src/app/(marketing)/page.tsx
-!frontend/src/app/(dashboard)/layout.tsx
-
-# Keep only public-facing files
-!frontend/src/components/ui/mascot-logo.tsx
-!frontend/src/components/ui/launch-countdown-popup.tsx
-!frontend/src/components/ui/button.tsx
-!frontend/src/components/marketing/**
-!frontend/src/lib/utils.ts
-!frontend/src/components/marketing/**
-!frontend/src/lib/utils.ts
-
-# Configuration files
+# Backend - Tüm kaynak kod gizli
+backend/src/
+backend/migrations/
+backend/__tests__/
+backend/docs/
+backend/*.js
+backend/*.ts
 backend/tsconfig.json
 backend/jest.config.js
+backend/schema.sql
+backend/test-*.js
+backend/test-*.ps1
+!backend/.env.example
+!backend/package.json
+!backend/README.md
 
-# Database migrations (keep private)
-backend/migrations/**/*.sql
+# Frontend - Tüm kaynak kod gizli
+frontend/src/
+frontend/public/
+frontend/.next/
+frontend/*.config.*
+frontend/*.json
+!frontend/package.json
+!frontend/README.md
 
-# Documentation (keep private during development)
-backend/docs/**/*.md
-!backend/docs/README.md
+# Widget - Tüm kaynak kod gizli
+widget/
 
-# Tests (keep private)
-backend/src/__tests__/**
-frontend/src/__tests__/**
+# Internal docs
+----*.md
+backend/docs/
+.kiro/
+
+# Python scripts
+*.py
+
+# Test scripts
+test-*.ps1
+test-*.js
+
+# Build outputs
+dist/
+build/
+out/
