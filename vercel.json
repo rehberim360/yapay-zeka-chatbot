@@ -5,5 +5,18 @@
   "installCommand": "npm install",
   "outputDirectory": ".next",
   "framework": "nextjs",
-  "rootDirectory": "frontend"
+  "rootDirectory": "frontend",
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "yapayzekachatbot.com"
+        }
+      ],
+      "destination": "https://www.yapayzekachatbot.com/:path*",
+      "permanent": true
+    }
+  ]
 }
