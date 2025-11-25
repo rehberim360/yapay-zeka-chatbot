@@ -155,6 +155,8 @@ frontend/src/**/*.ts
 !frontend/src/components/ui/button.tsx
 !frontend/src/components/marketing/**
 !frontend/src/lib/utils.ts
+!frontend/src/components/marketing/**
+!frontend/src/lib/utils.ts
 
 # Configuration files
 backend/tsconfig.json
