@@ -1,4 +1,18 @@
 {
+  "name": "yapay-zeka-chatbot",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend",
+    "widget"
+  ],
+  "scripts": {
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:backend": "cd backend && npm run dev",
+    "build:frontend": "cd frontend && npm run build",
+    "build:backend": "cd backend && npm run build"
+  },
   "dependencies": {
     "@google/generative-ai": "^0.24.1",
     "zod": "^4.1.13"
