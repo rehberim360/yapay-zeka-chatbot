@@ -35,6 +35,7 @@
     "noUncheckedSideEffectImports": true,
     "moduleDetection": "force",
     "skipLibCheck": true,
+    "downlevelIteration": true,
   },
   "exclude": [
     "**/*.test.ts",

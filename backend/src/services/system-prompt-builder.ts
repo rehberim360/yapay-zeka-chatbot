@@ -7,6 +7,7 @@
 
 import { supabase } from '../lib/supabase.js';
 import { logger } from '../utils/logger.js';
+import { cacheService } from './cache.service.js';
 
 interface Tenant {
   id: string;
@@ -41,6 +42,13 @@ export class SystemPromptBuilder {
    */
   async build(tenantId: string): Promise<string> {
     try {
+      // Check cache first
+      const cached = await cacheService.getBotPrompt(tenantId);
+      if (cached) {
+        logger.info('Using cached system prompt', { tenantId });
+        return cached;
+      }
+
       // 1. Get tenant info
       const tenant = await this.getTenant(tenantId);
 
@@ -61,7 +69,13 @@ export class SystemPromptBuilder {
       sections.push(this.buildGuidelinesSection());
       sections.push(this.buildSecuritySection());
 
-      return sections.join('\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n');
+      const prompt = sections.join('\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n');
+
+      // Cache the prompt (simple for now, intelligent TTL will be added later)
+      await cacheService.cacheBotPrompt(tenantId, prompt);
+      logger.info('System prompt cached', { tenantId });
+
+      return prompt;
     } catch (error) {
       logger.error('Error building system prompt', {
         tenantId,
@@ -94,6 +108,13 @@ export class SystemPromptBuilder {
    * Get offerings
    */
   private async getOfferings(tenantId: string): Promise<Offering[]> {
+    // Check cache first
+    const cached = await cacheService.getOfferings(tenantId);
+    if (cached) {
+      logger.info('Using cached offerings', { tenantId });
+      return cached;
+    }
+
     const { data } = await supabase
       .from('offerings')
       .select('*')
@@ -102,7 +123,14 @@ export class SystemPromptBuilder {
       .order('type')
       .order('name');
 
-    return (data || []) as Offering[];
+    const offerings = (data || []) as Offering[];
+
+    // Cache offerings (simple for now)
+    if (offerings.length > 0) {
+      await cacheService.cacheOfferings(tenantId, offerings);
+    }
+
+    return offerings;
   }
 
   /**

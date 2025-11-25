@@ -9,6 +9,8 @@ import { Router, type Request, type Response } from 'express';
 import { BotService } from '../services/bot.service.js';
 import { logger } from '../utils/logger.js';
 import { z } from 'zod';
+import { tenantRateLimiter } from '../middleware/tenant-rate-limiter.js';
+import { promptSecurityMiddleware } from '../middleware/prompt-security.js';
 
 const router = Router();
 const botService = new BotService();
@@ -23,12 +25,11 @@ const sendMessageSchema = z.object({
   message: z.string().min(1).max(2000),
   customer_info: z
     .object({
-      email: z.string().email().optional().or(z.undefined()),
-      phone: z.string().optional().or(z.undefined()),
-      name: z.string().optional().or(z.undefined()),
+      email: z.string().email().optional(),
+      phone: z.string().optional(),
+      name: z.string().optional(),
     })
-    .optional()
-    .or(z.undefined()),
+    .optional(),
 });
 
 // ============================================
@@ -38,63 +39,84 @@ const sendMessageSchema = z.object({
 /**
  * POST /api/chat/message
  * Send message to chatbot (streaming response)
+ * 
+ * Security: Rate limiting + Prompt injection protection
  */
-router.post('/message', async (req: Request, res: Response) => {
-  try {
-    // Validate request
-    const validated = sendMessageSchema.parse(req.body);
-
-    // Set headers for streaming
-    res.setHeader('Content-Type', 'text/event-stream');
-    res.setHeader('Cache-Control', 'no-cache');
-    res.setHeader('Connection', 'keep-alive');
-
-    logger.info('Processing chat message', {
-      tenantId: validated.tenant_id,
-      sessionId: validated.session_id,
-      messageLength: validated.message.length,
-    });
-
-    // Stream response
-    const stream = botService.processMessage(
-      validated.tenant_id,
-      validated.session_id,
-      validated.message,
-      validated.customer_info
-    );
-
-    for await (const chunk of stream) {
-      // Send chunk as SSE (Server-Sent Events)
-      res.write(`data: ${JSON.stringify({ chunk })}\n\n`);
-    }
-
-    // Send completion event
-    res.write(`data: ${JSON.stringify({ done: true })}\n\n`);
-    res.end();
-  } catch (error) {
-    logger.error('Error in chat message endpoint', {
-      error: error instanceof Error ? error.message : 'Unknown error',
-    });
-
-    if (error instanceof z.ZodError) {
-      res.status(400).json({
-        error: 'Validation error',
-        details: error.issues,
+router.post(
+  '/message',
+  tenantRateLimiter,
+  promptSecurityMiddleware,
+  async (req: Request, res: Response) => {
+    try {
+      // Log incoming request for debugging
+      logger.debug('Incoming chat request', {
+        body: req.body,
+        headers: req.headers['content-type'],
       });
-    } else {
-      res.status(500).json({
-        error: 'Internal server error',
-        message: error instanceof Error ? error.message : 'Unknown error',
+
+      // Validate request
+      const validated = sendMessageSchema.parse(req.body);
+
+      // Set headers for streaming
+      res.setHeader('Content-Type', 'text/event-stream');
+      res.setHeader('Cache-Control', 'no-cache');
+      res.setHeader('Connection', 'keep-alive');
+
+      logger.info('Processing chat message', {
+        tenantId: validated.tenant_id,
+        sessionId: validated.session_id,
+        messageLength: validated.message.length,
       });
+
+      // Stream response
+      const stream = botService.processMessage(
+        validated.tenant_id,
+        validated.session_id,
+        validated.message,
+        validated.customer_info
+      );
+
+      for await (const chunk of stream) {
+        // Send chunk as SSE (Server-Sent Events)
+        res.write(`data: ${JSON.stringify({ chunk })}\n\n`);
+      }
+
+      // Send completion event
+      res.write(`data: ${JSON.stringify({ done: true })}\n\n`);
+      res.end();
+    } catch (error) {
+      logger.error('Error in chat message endpoint', {
+        error: error instanceof Error ? error.message : 'Unknown error',
+        body: req.body,
+        zodError: error instanceof z.ZodError ? error.issues : undefined,
+      });
+
+      if (error instanceof z.ZodError) {
+        return res.status(400).json({
+          error: 'Validation error',
+          message: 'Missing required fields',
+          details: error.issues.map((issue) => ({
+            field: issue.path.join('.'),
+            message: issue.message,
+          })),
+        });
+      } else {
+        return res.status(500).json({
+          error: 'Internal server error',
+          message: error instanceof Error ? error.message : 'Unknown error',
+        });
+      }
     }
   }
-});
+);
 
 /**
  * GET /api/chat/conversations
  * Get all conversations for a tenant
+ * 
+ * Security: Rate limiting
  */
-router.get('/conversations', async (req: Request, res: Response) => {
+router.get('/conversations', tenantRateLimiter, async (req: Request, res: Response) => {
   try {
     const tenantId = req.query.tenant_id as string;
 

@@ -5,10 +5,12 @@
  * Streaming responses, function calling, conversation management.
  */
 
-import { GoogleGenerativeAI, GenerativeModel } from '@google/generative-ai';
+import { GoogleGenerativeAI, GenerativeModel, SchemaType } from '@google/generative-ai';
 import { supabase } from '../lib/supabase.js';
 import { logger } from '../utils/logger.js';
 import { SystemPromptBuilder } from './system-prompt-builder.js';
+import { checkTokenLimit } from '../middleware/tenant-rate-limiter.js';
+import { promptSecurityGuard } from '../middleware/prompt-security.js';
 
 interface ConversationContext {
   conversationId: string;
@@ -56,9 +58,9 @@ export class BotService {
     sessionId: string,
     userMessage: string,
     customerInfo?: {
-      email?: string;
-      phone?: string;
-      name?: string;
+      email?: string | undefined;
+      phone?: string | undefined;
+      name?: string | undefined;
     }
   ): AsyncGenerator<string, void, unknown> {
     try {
@@ -75,13 +77,14 @@ export class BotService {
         content: userMessage,
       });
 
-      // 3. Build system prompt
-      const systemPrompt = await this.promptBuilder.build(tenantId);
+      // 3. Build system prompt (with security hardening)
+      let systemPrompt = await this.promptBuilder.build(tenantId);
+      systemPrompt = promptSecurityGuard.hardenSystemPrompt(systemPrompt);
 
       // 4. Get bot config
       const botConfig = await this.getBotConfig(tenantId);
 
-      // 5. Get AI model
+      // 5. Get AI model with function declarations
       const model = this.genAI.getGenerativeModel({
         model: botConfig.ai_model,
         generationConfig: {
@@ -89,6 +92,127 @@ export class BotService {
           maxOutputTokens: botConfig.max_tokens,
         },
         systemInstruction: systemPrompt,
+        tools: [
+          {
+            functionDeclarations: [
+              {
+                name: 'list_services',
+                description: 'Mevcut hizmetleri listele. Müşteri hizmetler hakkında bilgi istediğinde kullan.',
+                parameters: {
+                  type: SchemaType.OBJECT,
+                  properties: {
+                    category: {
+                      type: SchemaType.STRING,
+                      description: 'Hizmet kategorisi (opsiyonel)',
+                    },
+                  },
+                },
+              },
+              {
+                name: 'get_service_details',
+                description: 'Belirli bir hizmetin detaylarını getir',
+                parameters: {
+                  type: SchemaType.OBJECT,
+                  properties: {
+                    service_id: {
+                      type: SchemaType.STRING,
+                      description: 'Hizmet ID',
+                    },
+                  },
+                  required: ['service_id'],
+                },
+              },
+              {
+                name: 'check_appointment_availability',
+                description: 'Randevu müsaitliğini kontrol et',
+                parameters: {
+                  type: SchemaType.OBJECT,
+                  properties: {
+                    offering_id: {
+                      type: SchemaType.STRING,
+                      description: 'Hizmet ID',
+                    },
+                    date: {
+                      type: SchemaType.STRING,
+                      description: 'Tarih (YYYY-MM-DD formatında)',
+                    },
+                    time: {
+                      type: SchemaType.STRING,
+                      description: 'Saat (HH:MM formatında)',
+                    },
+                  },
+                  required: ['offering_id', 'date', 'time'],
+                },
+              },
+              {
+                name: 'create_appointment',
+                description: 'Yeni randevu oluştur',
+                parameters: {
+                  type: SchemaType.OBJECT,
+                  properties: {
+                    offering_id: {
+                      type: SchemaType.STRING,
+                      description: 'Hizmet ID',
+                    },
+                    customer_name: {
+                      type: SchemaType.STRING,
+                      description: 'Müşteri adı',
+                    },
+                    customer_email: {
+                      type: SchemaType.STRING,
+                      description: 'Müşteri email',
+                    },
+                    customer_phone: {
+                      type: SchemaType.STRING,
+                      description: 'Müşteri telefon',
+                    },
+                    date: {
+                      type: SchemaType.STRING,
+                      description: 'Randevu tarihi (YYYY-MM-DD)',
+                    },
+                    time: {
+                      type: SchemaType.STRING,
+                      description: 'Randevu saati (HH:MM)',
+                    },
+                    notes: {
+                      type: SchemaType.STRING,
+                      description: 'Ek notlar (opsiyonel)',
+                    },
+                  },
+                  required: ['offering_id', 'customer_name', 'date', 'time'],
+                },
+              },
+              {
+                name: 'search_knowledge_base',
+                description: 'Bilgi tabanında arama yap. SSS ve genel bilgiler için kullan.',
+                parameters: {
+                  type: SchemaType.OBJECT,
+                  properties: {
+                    query: {
+                      type: SchemaType.STRING,
+                      description: 'Arama sorgusu',
+                    },
+                  },
+                  required: ['query'],
+                },
+              },
+              {
+                name: 'handover_to_human',
+                description: 'Canlı desteğe yönlendir. Karmaşık sorular veya özel durumlar için kullan.',
+                parameters: {
+                  type: SchemaType.OBJECT,
+                  properties: {
+                    reason: {
+                      type: SchemaType.STRING,
+                      description: 'Yönlendirme sebebi',
+                    },
+                  },
+                  required: ['reason'],
+                },
+              },
+            ],
+          },
+        ],
       });
 
       // 6. Prepare chat history
@@ -97,10 +221,14 @@ export class BotService {
         parts: [{ text: msg.content }],
       }));
 
-      // 7. Start chat session
+      // 7. Check token limit before generation
+      const estimatedTokens = this.estimateTokens(systemPrompt + userMessage);
+      await checkTokenLimit(tenantId, estimatedTokens);
+
+      // 8. Start chat session
       const chat = model.startChat({ history });
 
-      // 8. Stream response
+      // 9. Stream response
       const startTime = Date.now();
       const result = await chat.sendMessageStream(userMessage);
 
@@ -114,6 +242,25 @@ export class BotService {
         const calls = chunk.functionCalls?.();
         if (calls && calls.length > 0) {
           functionCall = calls[0];
+          
+          // Validate function call
+          const validation = promptSecurityGuard.validateFunctionCall(
+            functionCall.name,
+            functionCall.args
+          );
+          
+          if (!validation.isValid) {
+            logger.warn('Invalid function call blocked', {
+              functionName: functionCall.name,
+              reason: validation.reason,
+            });
+            
+            fullResponse = 'Üzgünüm, bu işlemi gerçekleştiremiyorum.';
+            yield fullResponse;
+            functionCall = null; // Clear function call
+            break;
+          }
+          
           break;
         }
 
@@ -123,7 +270,7 @@ export class BotService {
         }
       }
 
-      // 8. Handle function call if present
+      // 10. Handle function call if present
       if (functionCall) {
         logger.info('Function call detected', {
           function: functionCall.name,
@@ -138,17 +285,17 @@ export class BotService {
         );
 
         // Send function result back to AI
-        const followUpMessages = [
-          ...aiMessages,
+        const followUpResult = await chat.sendMessageStream([
           {
             functionResponse: {
               name: functionCall.name,
-              response: functionResult,
+              response: {
+                name: functionCall.name,
+                content: functionResult,
+              },
             },
           },
-        ];
-
-        const followUpResult = await model.generateContentStream(followUpMessages);
+        ]);
 
         for await (const chunk of followUpResult.stream) {
           const text = chunk.text();
@@ -161,7 +308,13 @@ export class BotService {
 
       const latency = Date.now() - startTime;
 
-      // 9. Save messages to database
+      // 11. Track token usage
+      const tokensUsed = this.estimateTokens(fullResponse);
+      if (tokensUsed > 0) {
+        await checkTokenLimit(tenantId, tokensUsed);
+      }
+
+      // 12. Save messages to database
       await this.saveMessages(context.conversationId, [
         { role: 'user', content: userMessage },
         {
@@ -236,9 +389,9 @@ export class BotService {
     tenantId: string,
     sessionId: string,
     customerInfo?: {
-      email?: string;
-      phone?: string;
-      name?: string;
+      email?: string | undefined;
+      phone?: string | undefined;
+      name?: string | undefined;
     }
   ): Promise<ConversationContext> {
     // 1. Create or get customer
@@ -559,5 +712,13 @@ export class BotService {
     }
 
     return { success: true, message: 'Handover initiated' };
+  }
+
+  /**
+   * Estimate token count (rough approximation)
+   * 1 token ≈ 4 characters for Turkish text
+   */
+  private estimateTokens(text: string): number {
+    return Math.ceil(text.length / 4);
   }
 }
