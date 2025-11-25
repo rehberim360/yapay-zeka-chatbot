@@ -1,5 +1,41 @@
 <div align="center">
 
+<!-- Animated Mascot Logo -->
+<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bodyGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Main Body -->
+  <circle cx="60" cy="60" r="55" fill="url(#bodyGradient)" opacity="0.95"/>
+  
+  <!-- Inner Circle -->
+  <circle cx="60" cy="60" r="50" fill="rgba(0,0,0,0.2)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+  
+  <!-- Top Reflection -->
+  <ellipse cx="60" cy="35" rx="40" ry="20" fill="rgba(255,255,255,0.15)"/>
+  
+  <!-- Left Eye -->
+  <ellipse cx="45" cy="60" rx="6" ry="8" fill="#06b6d4" filter="url(#glow)">
+    <animate attributeName="ry" values="8;1;8;8;8" dur="4s" repeatCount="indefinite" keyTimes="0;0.05;0.1;0.8;1"/>
+  </ellipse>
+  
+  <!-- Right Eye -->
+  <ellipse cx="75" cy="60" rx="6" ry="8" fill="#06b6d4" filter="url(#glow)">
+    <animate attributeName="ry" values="8;1;8;8;8" dur="4s" repeatCount="indefinite" keyTimes="0;0.05;0.1;0.8;1"/>
+  </ellipse>
+</svg>
+
 # 🤖 AI-Powered Chatbot Platform
 
 **Intelligent chatbot system with automated onboarding, multi-tenant architecture, and AI-driven customer service**
@@ -49,7 +85,7 @@ Transform any business website into an intelligent AI chatbot in **under 5 minut
 
 <div align="center">
 
-![YapayZeka Chatbot Platform](https://raw.githubusercontent.com/rehberim360/yapay-zeka-chatbot/main/frontend/public/images/yapay-zeka-chatbot-site-hero-section.jpg)
+![YapayZeka Chatbot Platform](docs/images/yapay-zeka-chatbot-site-hero-section.jpg)
 
 *AI-powered chatbot platform that transforms any business website into an intelligent assistant*
 
