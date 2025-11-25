@@ -134,38 +134,29 @@ test-*.ps1
 ----*.md
 
 # ============================================
-# PRIVATE - KEEP SOURCE CODE PRIVATE
+# PRIVATE - KEEP LOCAL ONLY
 # ============================================
 
-# Backend - Tüm kaynak kod gizli
-backend/src/
-backend/migrations/
-backend/__tests__/
-backend/docs/
-backend/*.js
-backend/*.ts
-backend/tsconfig.json
-backend/jest.config.js
-backend/schema.sql
-backend/test-*.js
-backend/test-*.ps1
-!backend/.env.example
-!backend/package.json
-!backend/README.md
+# Backend (tüm backend local'de kalacak)
+backend/
 
-# Frontend - Build outputs only (keep source for Vercel)
-frontend/.next/
-frontend/out/
-frontend/build/
-frontend/tsconfig.tsbuildinfo
+# Frontend - Dashboard (local'de kalacak)
+frontend/src/app/(dashboard)/
+frontend/src/hooks/
+frontend/src/services/
+frontend/src/types/
+frontend/src/__tests__/
 
-# Widget - Tüm kaynak kod gizli
+# Widget
 widget/
 
-# Internal docs
+# Internal docs (local'de kalacak)
 ----*.md
-backend/docs/
-.kiro/
+CHATBOT_CORE_COMPLETE.md
+SETUP_PUBLIC_REPO.md
+PRIVATE_REPO_STRATEGY.md
+GITHUB_SPONSORS_SETUP.md
+DUAL_REPO_STRATEGY.md
 
 # Python scripts
 *.py
@@ -174,7 +165,14 @@ backend/docs/
 test-*.ps1
 test-*.js
 
+# Kiro specs
+.kiro/
+
 # Build outputs
 dist/
 build/
 out/
+frontend/.next/
+frontend/out/
+frontend/build/
+frontend/tsconfig.tsbuildinfo
