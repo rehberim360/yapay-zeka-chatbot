@@ -49,7 +49,7 @@ Transform any business website into an intelligent AI chatbot in **under 5 minut
 
 <div align="center">
 
-![YapayZeka Chatbot Platform](https://raw.githubusercontent.com/rehberim360/yapay-zeka-chatbot/main/public/images/yapay-zeka-chatbot-site-hero-section.jpg)
+![YapayZeka Chatbot Platform](https://raw.githubusercontent.com/rehberim360/yapay-zeka-chatbot/main/frontend/public/images/yapay-zeka-chatbot-site-hero-section.jpg)
 
 *AI-powered chatbot platform that transforms any business website into an intelligent assistant*
 
