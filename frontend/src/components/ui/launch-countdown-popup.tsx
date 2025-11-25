@@ -101,7 +101,7 @@ export function LaunchCountdownPopup() {
                     ease: "easeInOut"
                   }}
                 >
-                  <MascotLogo size={80} />
+                  <MascotLogo size="xl" />
                 </motion.div>
               </div>
 

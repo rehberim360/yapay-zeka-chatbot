@@ -1,44 +1,48 @@
 <div align="center">
 
-<!-- Animated Mascot Logo -->
-<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="bodyGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:1" />
-    </linearGradient>
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
-      <feMerge>
-        <feMergeNode in="coloredBlur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-  </defs>
-  
-  <!-- Main Body -->
-  <circle cx="60" cy="60" r="55" fill="url(#bodyGradient)" opacity="0.95"/>
-  
-  <!-- Inner Circle -->
-  <circle cx="60" cy="60" r="50" fill="rgba(0,0,0,0.2)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
-  
-  <!-- Top Reflection -->
-  <ellipse cx="60" cy="35" rx="40" ry="20" fill="rgba(255,255,255,0.15)"/>
-  
-  <!-- Left Eye -->
-  <ellipse cx="45" cy="60" rx="6" ry="8" fill="#06b6d4" filter="url(#glow)">
-    <animate attributeName="ry" values="8;1;8;8;8" dur="4s" repeatCount="indefinite" keyTimes="0;0.05;0.1;0.8;1"/>
-  </ellipse>
-  
-  <!-- Right Eye -->
-  <ellipse cx="75" cy="60" rx="6" ry="8" fill="#06b6d4" filter="url(#glow)">
-    <animate attributeName="ry" values="8;1;8;8;8" dur="4s" repeatCount="indefinite" keyTimes="0;0.05;0.1;0.8;1"/>
-  </ellipse>
-</svg>
+<!-- Language Selector -->
+<p align="right">
+  <a href="README.md">🇬🇧 English</a> • <a href="README_TR.md">🇹🇷 Türkçe</a>
+</p>
 
-# 🤖 AI-Powered Chatbot Platform
+<!-- Logo and Title Side by Side -->
+<table border="0" cellpadding="0" cellspacing="0" style="border: none;">
+  <tr>
+    <td align="center" valign="middle" style="border: none;">
+      <!-- Animated Mascot Logo -->
+      <svg width="100" height="100" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="bodyGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:1" />
+          </linearGradient>
+          <filter id="glow">
+            <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+            <feMerge>
+              <feMergeNode in="coloredBlur"/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
+        </defs>
+        <circle cx="60" cy="60" r="55" fill="url(#bodyGradient)" opacity="0.95"/>
+        <circle cx="60" cy="60" r="50" fill="rgba(0,0,0,0.2)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+        <ellipse cx="60" cy="35" rx="40" ry="20" fill="rgba(255,255,255,0.15)"/>
+        <ellipse cx="45" cy="60" rx="6" ry="8" fill="#06b6d4" filter="url(#glow)">
+          <animate attributeName="ry" values="8;1;8;8;8" dur="4s" repeatCount="indefinite" keyTimes="0;0.05;0.1;0.8;1"/>
+        </ellipse>
+        <ellipse cx="75" cy="60" rx="6" ry="8" fill="#06b6d4" filter="url(#glow)">
+          <animate attributeName="ry" values="8;1;8;8;8" dur="4s" repeatCount="indefinite" keyTimes="0;0.05;0.1;0.8;1"/>
+        </ellipse>
+      </svg>
+    </td>
+    <td align="left" valign="middle" style="border: none; padding-left: 20px;">
+      <h1 style="margin: 0; font-size: 2.5em;">Yapay Zeka Chatbot</h1>
+      <p style="margin: 5px 0 0 0; font-size: 1.1em; color: #666;">AI-Powered Chatbot Platform</p>
+    </td>
+  </tr>
+</table>
 
-**Intelligent chatbot system with automated onboarding, multi-tenant architecture, and AI-driven customer service**
+<p><strong>Intelligent chatbot system with automated onboarding, multi-tenant architecture, and AI-driven customer service</strong></p>
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.9-blue.svg)](https://www.typescriptlang.org/)
