@@ -19,12 +19,10 @@ export function SiteHeader() {
 
     const navLinks = [
         { name: "Nasıl Çalışır?", href: "/#how-it-works" },
-        { name: "Akıllı Kurulum", href: "/ozellikler/akilli-kurulum" },
-        { name: "Çoklu Dil", href: "/ozellikler/coklu-dil-destegi" },
-        { name: "Güvenlik", href: "/ozellikler/guvenlik" },
-        { name: "Sağlık", href: "/cozumler/saglik" },
-        { name: "E-Ticaret", href: "/cozumler/e-ticaret" },
-        { name: "Emlak", href: "/cozumler/emlak" },
+        { name: "Özellikler", href: "/ozellikler/akilli-kurulum" },
+        { name: "Çözümler", href: "/cozumler/saglik" },
+        { name: "Hakkında", href: "/hakkinda" },
+        { name: "💝 Sponsor", href: "/sponsor" },
         { name: "Fiyatlandırma", href: "/#pricing" },
     ]
 
