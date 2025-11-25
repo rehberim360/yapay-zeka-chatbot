@@ -1,5 +1,7 @@
 # 🚀 Sponsor Applications
 
+**[🇹🇷 Türkçe versiyon için tıklayın](./README_TR.md)**
+
 This directory contains pitch decks and applications for various sponsorship programs to support the development of our AI-Powered Chatbot Platform.
 
 ## 📋 Overview
@@ -95,29 +97,48 @@ We're seeking sponsorship to accelerate development, reduce infrastructure costs
 
 ## 📊 How Funds Will Be Used
 
-### Infrastructure (40%)
-- Database hosting (Supabase)
-- Frontend hosting (Vercel)
-- CDN and bandwidth
-- Monitoring and logging
+### Infrastructure (30%)
+- Database hosting (Supabase): $500/month
+- Frontend hosting (Vercel): $20/month
+- CDN and bandwidth: $100/month
+- Monitoring and logging: $50/month
+- **Subtotal:** ~$670/month = $4,020 (6 months)
 
-### AI/ML (35%)
-- Gemini API costs
-- GPT-4/Claude testing
-- Model optimization
-- Token usage
+### AI/ML (25%)
+- Gemini API costs: $400/month
+- GPT-4/Claude testing: $200/month
+- Model optimization: $100/month
+- Token usage buffer: $100/month
+- **Subtotal:** ~$800/month = $4,800 (6 months)
 
-### Development (15%)
-- Developer tools
-- Testing infrastructure
-- CI/CD pipelines
-- Documentation hosting
+### Team & Development (35%)
+- **Lead Developer** (Part-time): $2,000/month
+- **UI/UX Designer** (Freelance): $500/month
+- **Content Writer** (Freelance): $300/month
+- Developer tools & licenses: $100/month
+- Testing infrastructure: $100/month
+- **Subtotal:** ~$3,000/month = $18,000 (6 months)
 
-### Community (10%)
-- Open-source maintenance
-- Hackathon prizes
-- Conference tickets
-- Swag for contributors
+### Marketing & Community (10%)
+- Conference tickets: $500
+- Hackathon prizes: $500
+- Swag for contributors: $300
+- Paid ads (Google/Meta): $500/month
+- **Subtotal:** ~$1,300 + $3,000 = $4,300 (6 months)
+
+---
+
+### 💰 Total Budget Breakdown (6 Months)
+
+| Category | Monthly | 6 Months | Percentage |
+|----------|---------|----------|------------|
+| Infrastructure | $670 | $4,020 | 13% |
+| AI/ML | $800 | $4,800 | 15% |
+| Team & Development | $3,000 | $18,000 | 58% |
+| Marketing & Community | $717 | $4,300 | 14% |
+| **Total** | **$5,187** | **$31,120** | **100%** |
+
+**Note:** Sponsorship target of $20,000-25,000 will cover infrastructure, AI costs, and partial team expenses. Remaining costs will be covered by early revenue and founder investment.
 
 ---
 
