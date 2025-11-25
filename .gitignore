@@ -153,14 +153,11 @@ backend/test-*.ps1
 !backend/package.json
 !backend/README.md
 
-# Frontend - Tüm kaynak kod gizli
-frontend/src/
-frontend/public/
+# Frontend - Build outputs only (keep source for Vercel)
 frontend/.next/
-frontend/*.config.*
-frontend/*.json
-!frontend/package.json
-!frontend/README.md
+frontend/out/
+frontend/build/
+frontend/tsconfig.tsbuildinfo
 
 # Widget - Tüm kaynak kod gizli
 widget/
