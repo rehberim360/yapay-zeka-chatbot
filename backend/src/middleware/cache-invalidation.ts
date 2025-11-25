@@ -4,7 +4,7 @@
  * Tracks updates and invalidates cache when data changes
  */
 
-import { Request, Response, NextFunction } from 'express';
+import type { Request, Response, NextFunction } from 'express';
 import { cacheService } from '../services/cache.service.js';
 import { logger } from '../utils/logger.js';
 

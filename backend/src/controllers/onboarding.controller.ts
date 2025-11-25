@@ -20,8 +20,10 @@ import type {
   CompanyInfoV2, 
   Offering,
   SmartPageSelectionData,
-  OfferingSelectionData
+  OfferingSelectionData,
+  OnboardingPhase
 } from '../types/onboarding-v2.js';
+import { PagePriority } from '../types/onboarding-v2.js';
 
 // ============================================================================
 // VALIDATION SCHEMAS
@@ -213,7 +215,7 @@ export class OnboardingController {
               autoAddedPages.push({
                 url: offering.source_url,
                 type: offering.type === 'PRODUCT' ? 'PRODUCT_DETAIL' : 'SERVICE_DETAIL',
-                priority: 'HIGH',
+                priority: PagePriority.HIGH,
                 reason: `Detay sayfası: ${offering.name}`,
                 expected_data: `${offering.name} için detaylı bilgiler`,
                 auto_select: true
@@ -317,7 +319,7 @@ export class OnboardingController {
       }
 
       // Save company info
-      await this.orchestrator.savePhaseData(jobId, 'COMPANY_INFO_REVIEW', companyInfo as CompanyInfoV2);
+      await this.orchestrator.savePhaseData(jobId, 'WAITING_APPROVAL' as OnboardingPhase, companyInfo as CompanyInfoV2);
 
       res.json({
         success: true,
@@ -377,7 +379,7 @@ export class OnboardingController {
         total_count: selectedOfferings.length
       };
 
-      await this.orchestrator.savePhaseData(jobId, 'OFFERING_SELECTION', offeringData);
+      await this.orchestrator.savePhaseData(jobId, 'WAITING_APPROVAL' as OnboardingPhase, offeringData);
 
       // Start completion phase (generate system prompt, save to database)
       console.log('🎯 Starting completion phase...');
@@ -636,12 +638,12 @@ export class OnboardingController {
         approved: true
       };
 
-      await this.orchestrator.savePhaseData(jobId, 'OFFERING_DETAIL_REVIEW', reviewData);
+      await this.orchestrator.savePhaseData(jobId, 'WAITING_APPROVAL' as OnboardingPhase, reviewData);
 
-      // Start Other Pages Scraping
-      console.log('📄 Starting Other Pages Scraping...');
-      this.orchestrator.executePhase(jobId, 'OTHER_PAGES_SCRAPING').catch((err: Error) => {
-        console.error('❌ Other Pages Scraping failed:', err);
+      // Start completion phase
+      console.log('🎯 Starting completion phase...');
+      this.orchestrator.completeOnboarding(jobId).catch((err: Error) => {
+        console.error('❌ Completion failed:', err);
       });
 
       res.json({

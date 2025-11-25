@@ -6,6 +6,22 @@ This directory contains pitch decks and applications for various sponsorship pro
 
 We're seeking sponsorship to accelerate development, reduce infrastructure costs during the growth phase, and bring affordable AI chatbot solutions to small businesses worldwide.
 
+### 🎯 Project Status
+
+- **Launch Date:** 60 days from now
+- **Website:** [www.yapayzekachatbot.com](https://www.yapayzekachatbot.com)
+- **GitHub:** [github.com/rehberim360/yapay-zeka-chatbot](https://github.com/rehberim360/yapay-zeka-chatbot)
+- **Current Phase:** Active Development
+- **Repository:** Private (will be open-sourced at launch)
+
+### 💡 Why Sponsor Us?
+
+- 🇹🇷 **First Turkish AI Chatbot Platform** - Targeting 500K+ SMBs
+- 🤖 **YZBot Device** - Physical AI assistant (launching Q2 2026)
+- 📈 **Proven Traction** - Active development, professional documentation
+- 🌍 **Global Expansion** - Turkey → MENA → Europe
+- 💰 **Revenue Potential** - 1-1.5B ₺ ARR by 2027
+
 ---
 
 ## 🎯 Available Applications

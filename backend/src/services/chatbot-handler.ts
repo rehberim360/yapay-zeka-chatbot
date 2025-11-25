@@ -29,7 +29,8 @@ export const handleChatMessage = async (request: ChatRequest): Promise<ChatRespo
   
   // 2. System prompt'u al ve runtime değişkenleri ekle
   const staticPrompt = tenant.metadata.system_prompt;
-  const dynamicPrompt = injectRuntimeVariables(staticPrompt, tenant.metadata.timezone || 'Europe/Istanbul');
+  // TODO: Implement injectRuntimeVariables function
+  const dynamicPrompt = staticPrompt; // injectRuntimeVariables(staticPrompt, tenant.metadata.timezone || 'Europe/Istanbul');
   
   // 3. Gemini'ye gönder
   const geminiRequest: { systemInstruction: string; message: string; sessionId?: string } = {

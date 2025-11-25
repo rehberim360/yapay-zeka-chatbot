@@ -132,3 +132,37 @@ test-*.ps1
 
 # Temporary markdown files
 ----*.md
+
+# ============================================
+# PRIVATE - NOT FOR PUBLIC REPO
+# ============================================
+# Backend source code (keep private during development)
+backend/src/**/*.ts
+backend/src/**/*.js
+!backend/src/index.ts
+
+# Frontend source code (keep private during development)
+frontend/src/**/*.tsx
+frontend/src/**/*.ts
+!frontend/src/app/(marketing)/page.tsx
+
+# Keep only public-facing files
+!frontend/src/components/ui/mascot-logo.tsx
+!frontend/src/components/ui/launch-countdown-popup.tsx
+!frontend/src/components/marketing/**
+
+# Configuration files
+backend/tsconfig.json
+frontend/tsconfig.json
+backend/jest.config.js
+
+# Database migrations (keep private)
+backend/migrations/**/*.sql
+
+# Documentation (keep private during development)
+backend/docs/**/*.md
+!backend/docs/README.md
+
+# Tests (keep private)
+backend/src/__tests__/**
+frontend/src/__tests__/**

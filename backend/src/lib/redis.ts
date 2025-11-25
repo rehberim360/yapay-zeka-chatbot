@@ -4,10 +4,10 @@
  * Upstash Redis connection for caching
  */
 
-import Redis from 'ioredis';
+import { Redis } from 'ioredis';
 import { logger } from '../utils/logger.js';
 
-type RedisClient = InstanceType<typeof Redis>;
+type RedisClient = Redis;
 
 let redis: RedisClient | null = null;
 

@@ -43,19 +43,15 @@ Transform any business website into an intelligent AI chatbot in **under 5 minut
 ## 🚀 Demo
 
 ### Live Demo
-🔗 **[Try Demo Chatbot](https://demo.yapayzekachatbot.com)** (Coming Soon)
+🔗 **[Visit Website](https://www.yapayzekachatbot.com)** - Launching in 60 days!
 
-### Video Walkthrough
-📹 **[Watch 2-Minute Demo](https://youtube.com/demo)** (Coming Soon)
-
-### Screenshots
+### Platform Preview
 
 <div align="center">
 
-| Smart Onboarding | Chat Widget | Dashboard |
-|:---:|:---:|:---:|
-| ![Onboarding](docs/assets/onboarding.gif) | ![Widget](docs/assets/widget.gif) | ![Dashboard](docs/assets/dashboard.gif) |
-| AI analyzes your website | Beautiful chat interface | Powerful admin panel |
+![YapayZeka Chatbot Platform](frontend/public/images/yapay-zeka-chatbot-site-hero-section.jpg)
+
+*AI-powered chatbot platform that transforms any business website into an intelligent assistant*
 
 </div>
 
@@ -146,46 +142,31 @@ graph TB
 
 ## 🚀 Quick Start
 
-### Prerequisites
+> **Note:** This project is currently in active development. Full source code will be released upon launch.
 
-- Node.js 20+
-- Supabase account
-- Gemini API key
+### For Sponsors & Contributors
 
-### Installation
+We're actively seeking sponsors to help bring this platform to market. If you're interested in:
+- **Sponsoring** the project
+- **Early access** to the platform
+- **Partnership** opportunities
 
-```bash
-# Clone repository
-git clone https://github.com/rehberim360/yapay-zeka-chatbot.git
-cd yapay-zeka-chatbot
+Please check our [Sponsorship Opportunities](docs/sponsors/README.md) or contact us directly.
 
-# Install dependencies
-npm install
+### Coming Soon (60 Days)
 
-# Setup environment
-cp backend/.env.example backend/.env
-# Add your API keys to backend/.env
+- ✅ Full source code release
+- ✅ Detailed installation guide
+- ✅ API documentation
+- ✅ Widget integration examples
+- ✅ Video tutorials
 
-# Run database migrations
-# (Run SQL files in backend/migrations/ in Supabase SQL Editor)
+### Preview Access
 
-# Start backend
-cd backend
-npm run dev
-
-# Start frontend (in another terminal)
-cd frontend
-npm run dev
-```
-
-### Widget Integration
-
-```html
-<!-- Add to your website -->
-<script src="https://cdn.example.com/widget.js" 
-        data-tenant-id="your-tenant-id">
-</script>
-```
+Visit [www.yapayzekachatbot.com](https://www.yapayzekachatbot.com) to:
+- See the platform in action
+- Join the waitlist
+- Get early bird pricing
 
 ---
 
@@ -307,10 +288,10 @@ Built with amazing open-source technologies:
 
 ## 📞 Contact
 
-- **Website:** [example.com](https://example.com) (Coming Soon)
-- **Email:** contact@example.com
-- **Twitter:** [@example](https://twitter.com/example)
-- **Discord:** [Join Community](https://discord.gg/example)
+- **Website:** [www.yapayzekachatbot.com](https://www.yapayzekachatbot.com) - Launching Soon!
+- **GitHub:** [github.com/rehberim360/yapay-zeka-chatbot](https://github.com/rehberim360/yapay-zeka-chatbot)
+- **Email:** info@yapayzekachatbot.com
+- **Status:** 🚧 In Active Development - Launch in 60 Days!
 
 ---
 
@@ -322,7 +303,9 @@ Built with amazing open-source technologies:
 
 <div align="center">
 
-**Made with ❤️ by [Your Name](https://github.com/rehberim360)**
+**Made with ❤️ in Turkey | [www.yapayzekachatbot.com](https://www.yapayzekachatbot.com)**
+
+🚀 **Launching in 60 Days** | 🌟 **Star us on GitHub** | 💼 **[Seeking Sponsors](docs/sponsors/README.md)**
 
 [⬆ back to top](#-ai-powered-chatbot-platform)
 

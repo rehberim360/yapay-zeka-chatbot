@@ -120,7 +120,7 @@ async function checkRateLimit(
     }
 
     // Get count from zcard result
-    const count = results[2][1] as number;
+    const count = (results[2]?.[1] ?? 0) as number;
     const remaining = Math.max(0, limit - count);
     const reset = now + (WINDOW_DURATION * 1000);
 
