@@ -31,10 +31,19 @@ Framework: Next.js
 ```
 
 ### Root Directory
-```
-Root Directory: frontend
-```
-⚠️ **ÖNEMLİ:** "frontend" klasörünü root olarak seç!
+⚠️ **ÖNEMLİ:** Eğer dropdown'da "frontend" görünmüyorsa:
+
+**Yöntem A (Önerilen):**
+1. "Edit" butonuna tıkla
+2. Manuel olarak yaz: `frontend`
+3. Enter'a bas
+
+**Yöntem B (Alternatif):**
+1. Dropdown'ı boş bırak (root olarak `.` seçili kalacak)
+2. Aşağıdaki ayarları yap:
+   - Build Command: `cd frontend && npm run build`
+   - Output Directory: `frontend/.next`
+   - Install Command: `cd frontend && npm install`
 
 ### Build Settings
 ```
