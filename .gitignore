@@ -144,7 +144,10 @@ backend/src/**/*.js
 # Frontend source code (keep private during development)
 frontend/src/**/*.tsx
 frontend/src/**/*.ts
+!frontend/src/app/layout.tsx
+!frontend/src/app/(marketing)/layout.tsx
 !frontend/src/app/(marketing)/page.tsx
+!frontend/src/app/(dashboard)/layout.tsx
 
 # Keep only public-facing files
 !frontend/src/components/ui/mascot-logo.tsx
