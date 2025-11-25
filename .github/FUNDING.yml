@@ -1,5 +1,8 @@
 # GitHub Sponsors configuration
 # Private repo olsa bile bu dosya sponsor button'u gösterir
 
-github: rehberim360
-custom: ['https://yapayzekachatbot.com/sponsor']
+# GitHub Sponsors hesabı aktif olunca bu satırı aç:
+# github: rehberim360
+
+# Şimdilik custom link kullan
+custom: ['https://yapayzekachatbot.com/sponsor', 'https://github.com/sponsors/rehberim360']
