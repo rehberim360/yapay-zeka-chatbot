@@ -328,9 +328,10 @@ Built with amazing open-source technologies:
 
 ## 📞 Contact
 
-- **Website:** [www.yapayzekachatbot.com](https://www.yapayzekachatbot.com) - Launching Soon!
+- **Email:** founder@yapayzekachatbot.com
+- **WhatsApp:** +90 532 612 6901
+- **Website:** [www.yapayzekachatbot.com](https://www.yapayzekachatbot.com)
 - **GitHub:** [github.com/rehberim360/yapay-zeka-chatbot](https://github.com/rehberim360/yapay-zeka-chatbot)
-- **Email:** info@yapayzekachatbot.com
 - **Status:** 🚧 In Active Development - Launch in 60 Days!
 
 ---

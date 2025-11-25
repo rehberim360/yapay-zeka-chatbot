@@ -259,9 +259,10 @@ Join **Vercel for Startups**:
 
 ## 📞 Contact
 
-**Email:** [your-email]@example.com  
+**Email:** founder@yapayzekachatbot.com  
+**WhatsApp:** +90 532 612 6901  
 **GitHub:** https://github.com/rehberim360/yapay-zeka-chatbot  
-**Demo:** [Coming in 2 weeks]
+**Website:** https://www.yapayzekachatbot.com
 
 ---
 

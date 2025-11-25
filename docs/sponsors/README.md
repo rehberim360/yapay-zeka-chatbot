@@ -233,9 +233,10 @@ We're seeking sponsorship to accelerate development, reduce infrastructure costs
 
 For questions about sponsorship applications:
 
-- **Email:** [your-email]@example.com
-- **GitHub:** https://github.com/rehberim360
-- **Twitter:** [@example](https://twitter.com/example)
+- **Email:** founder@yapayzekachatbot.com
+- **WhatsApp:** +90 532 612 6901
+- **GitHub:** https://github.com/rehberim360/yapay-zeka-chatbot
+- **Website:** https://www.yapayzekachatbot.com
 
 ---
 

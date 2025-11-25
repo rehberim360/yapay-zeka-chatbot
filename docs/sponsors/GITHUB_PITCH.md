@@ -243,10 +243,10 @@ We're committed to **open source**:
 
 ## 📞 Contact
 
-**GitHub:** https://github.com/rehberim360  
-**Email:** [your-email]@example.com  
-**Twitter:** [@example](https://twitter.com/example)  
-**Discord:** [Join Community](https://discord.gg/example) (Coming Soon)
+**Email:** founder@yapayzekachatbot.com  
+**WhatsApp:** +90 532 612 6901  
+**GitHub:** https://github.com/rehberim360/yapay-zeka-chatbot  
+**Website:** https://www.yapayzekachatbot.com
 
 ---
 

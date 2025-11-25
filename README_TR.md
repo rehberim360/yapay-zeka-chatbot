@@ -282,9 +282,10 @@ Harika açık kaynak teknolojileri ile oluşturuldu:
 
 ## 📞 İletişim
 
-- **Web Sitesi:** [www.yapayzekachatbot.com](https://www.yapayzekachatbot.com) - Yakında Başlatılıyor!
+- **E-posta:** founder@yapayzekachatbot.com
+- **WhatsApp:** +90 532 612 6901
+- **Web Sitesi:** [www.yapayzekachatbot.com](https://www.yapayzekachatbot.com)
 - **GitHub:** [github.com/rehberim360/yapay-zeka-chatbot](https://github.com/rehberim360/yapay-zeka-chatbot)
-- **E-posta:** info@yapayzekachatbot.com
 - **Durum:** 🚧 Aktif Geliştirme - 60 Gün İçinde Lansman!
 
 ---
