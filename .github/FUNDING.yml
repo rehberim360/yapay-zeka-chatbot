@@ -1,0 +1,5 @@
+# GitHub Sponsors configuration
+# Private repo olsa bile bu dosya sponsor button'u gösterir
+
+github: rehberim360
+custom: ['https://yapayzekachatbot.com/sponsor']

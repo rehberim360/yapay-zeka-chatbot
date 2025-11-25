@@ -5,6 +5,19 @@
   <a href="README.md">🇬🇧 English</a> • <a href="README_TR.md">🇹🇷 Türkçe</a>
 </p>
 
+<!-- Sponsor Rozetleri -->
+<p align="center">
+  <a href="https://github.com/sponsors/rehberim360">
+    <img src="https://img.shields.io/badge/Sponsor_Ol-💝-ff69b4?style=for-the-badge&logo=github-sponsors&logoColor=white" alt="GitHub'da Sponsor Ol" />
+  </a>
+  <a href="https://yapayzekachatbot.com/sponsor">
+    <img src="https://img.shields.io/badge/Sponsor_Paketleri-🚀-blueviolet?style=for-the-badge" alt="Sponsor Paketleri" />
+  </a>
+  <a href="https://yapayzekachatbot.com">
+    <img src="https://img.shields.io/badge/Canlı_Demo-🌐-00d4ff?style=for-the-badge" alt="Canlı Demo" />
+  </a>
+</p>
+
 <!-- Logo ve Başlık Yan Yana -->
 <table border="0" cellpadding="0" cellspacing="0" style="border: none;">
   <tr>
